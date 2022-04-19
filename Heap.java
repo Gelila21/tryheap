@@ -46,7 +46,7 @@ File file = new File(filename);
 FileWriter writer = new FileWriter (file);
 for (int i = 0; i
 < this.arr.length; i++)
-writer.write(this.arr[i] + "(n") ;
+writer.write(this.arr[i] + "\n") ;
 writer.close();
 }catch (IOException e){
 System.out.println ("Error while writing");

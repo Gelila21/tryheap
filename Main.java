@@ -8,9 +8,10 @@ public static void main(String[] args){
 try{
 ArrayList<Integer> readArray = new ArrayList<Integer>() ;
 File file = new File("/Users/gelilachaka/downloads/data_random.txt");
-Scanner reader = new Scanner(file);
-while (reader.hasNextInt()){
-readArray.add(reader.nextInt());
+try (Scanner reader = new Scanner(file)) {
+    while (reader.hasNextInt()){
+    readArray.add(reader.nextInt());
+    }
 }
 int[] arr = new int[readArray.size()];
 for (int i =0; i< readArray.size(); i++)
